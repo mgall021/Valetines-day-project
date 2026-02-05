@@ -27,6 +27,7 @@ yesBtn.addEventListener('click', function () {
   yesBtn.remove();
   noBtn.remove();
   gifImage.src = 'pokemon-pika-love.gif';
+  console.log(gifImage);
   gifImage.classList.add('celebration-gif');
 
   // gifImage.after("Thanks for being my Valentine ! ⸜(｡˃ ᵕ ˂ )⸝♡EHEH");
