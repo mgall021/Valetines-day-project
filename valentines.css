@@ -1,0 +1,73 @@
+h1 {
+  text-align: center;
+  font-family: 'Brush Script MT';
+  color: crimson;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#yesBtn {
+  background-color: rgb(23, 233, 23);
+  color: black;
+  margin-top: 20px;
+  height: 75px;
+  width: 150px;
+  font-size: large;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#noBtn {
+  background-color: rgb(244, 35, 35);
+  color: black;
+  margin-top: 20px;
+  height: 75px;
+  width: 150px;
+  font-size: large;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.success-message {
+  text-align: center;
+  font-size: 60px;
+  color: crimson;
+}
+
+.celebration-gif {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%; /* Makes the background 4x bigger than screen */
+  animation: gradientShift 15s ease infinite;
+  min-height: 100vh;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
