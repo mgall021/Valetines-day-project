@@ -1,9 +1,35 @@
-'use strict';
+('use strict');
 let clickCount = 0;
 const yesBtn = document.getElementById('yesBtn');
 const noBtn = document.getElementById('noBtn');
 const gifImage = document.getElementById('mainGif');
 const header = document.getElementById('mainHeader');
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const gifList = [
+        'images/bulbasaur-love.gif',
+        'images/pikachu-valentine.gif',
+        'https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2dwYjM3ZzNvaWR4azl1M3JrbXQ0MHhvZTRjbWl5czYzOHlqcXBkbSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/WK7omsLop0431tZjXb/giphy.webp',
+        'doggy- valentines.webp'
+      ];
+  
+    const mainImg = document.getElementById('mainGif');
+    if (!mainImg) return;
+  
+    // Get last index (or start at 0)
+    let currentIndex = Number(localStorage.getItem('gifIndex')) || 0;
+  
+    // Safety wrap
+    if (currentIndex >= gifList.length) {
+      currentIndex = 0;
+    }
+  
+    mainImg.src = gifList[currentIndex] + '?t=' + Date.now();
+  
+    // Save next index for the next refresh
+    localStorage.setItem('gifIndex', currentIndex + 1);
+  });
+  
 
 noBtn.addEventListener('click', function () {
   clickCount++;
@@ -26,6 +52,7 @@ yesBtn.addEventListener('click', function () {
   header.remove();
   yesBtn.remove();
   noBtn.remove();
+
   gifImage.src = 'pokemon-pika-love.gif';
   console.log(gifImage);
   gifImage.classList.add('celebration-gif');
@@ -64,5 +91,4 @@ function thirdAction() {
   yesBtn.style.fontSize = '85px';
 }
 
-
-// this is for my git commit 
+// this is for my git commit
